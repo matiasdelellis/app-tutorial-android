@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Nextcloud Notes Tutorial for Android
+  ~
+  ~ @copyright Copyright (c) 2020 John Doe <john@doe.com>
+  ~ @author John Doe <john@doe.com>
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.editor.EditorActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:textSize="@dimen/note_font_size_editor_title"
+                android:textColor="@color/defaultNoteTint"
+                android:textColorHint="@color/defaultNoteHintTint"
+                android:hint="@string/to_do"
+                android:autofillHints="@string/enter_title"
+                app:backgroundTint="@color/defaultNoteHintTint">
+            </EditText>
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:gravity="top|start"
+                android:textSize="@dimen/note_font_size_editor_content"
+                android:textColor="@color/defaultNoteTint"
+                android:textColorHint="@color/defaultNoteHintTint"
+                android:minLines="5"
+                android:hint="@string/new_note"
+                android:autofillHints="@string/enter_title"
+                app:backgroundTint="@color/defaultNoteHintTint">
+            </EditText>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
